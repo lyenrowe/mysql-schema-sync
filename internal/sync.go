@@ -174,7 +174,8 @@ func (sc *SchemaSync) getSchemaDiff(alter *TableAlterData) []string {
 			"] dest_has:", has, "\ndest_idx:", dIdx, "\nsource_idx:", idx)
 		var alterSQLs []string
 		if has {
-			if idx.SQL != dIdx.SQL {
+			defaultIndexType := " USING BTREE";
+			if strings.TrimSuffix(idx.SQL, defaultIndexType) != strings.TrimSuffix(dIdx.SQL, defaultIndexType) {
 				alterSQLs = append(alterSQLs, idx.alterAddSQL(true)...)
 			}
 		} else {
