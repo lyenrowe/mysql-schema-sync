@@ -135,3 +135,7 @@ mysql-schema-sync -help
   -single_schema_change
         生成 SQL DDL 语言每条命令是否只会进行单个修改操作，默认否
 ```
+
+### 编译了部分平台架构的可执行文件
+
+[编译的可执行程序](https://github.com/lyenrowe/mysql-schema-sync/releases/tag/1.0.0)
