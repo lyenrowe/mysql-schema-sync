@@ -20,7 +20,7 @@ MySQL Schema 自动同步工具
 ## 安装
 
 ```bash
-go install github.com/hidu/mysql-schema-sync@master
+go install github.com/lyenrowe/mysql-schema-sync
 ```
 
 ## 配置
